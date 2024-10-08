@@ -1,0 +1,115 @@
+name: Gym Data
+
+default-view: Gym Tabelle
+
+datasets:
+  gym:
+    path: gym.csv
+
+views:
+  Gym Tabelle:
+    dataset: gym
+    render-table:
+      columns:
+        Wartezeit (min):
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: oranges
+        Gym:
+          plot:
+            heatmap:
+              scale: ordinal
+              color-scheme: accent
+        Grad:
+          plot:
+            ticks:
+              scale: linear
+  Wartezeit vs. Uhrzeit:
+    dataset: gym
+    render-plot:
+      spec: |
+        {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "mark": {
+            "type": "line"
+          },
+          encoding: {
+            x: {
+              timeUnit: "hoursminutes",
+              field: "Datum",
+              type: "temporal",
+            },
+            y: {
+              field: "Wartezeit (min)",
+              type: "quantitative"
+            },
+            color: {
+              field: "Gym",
+              type: "nominal",
+              scale: {
+                scheme: "accent"
+              }
+            }
+          }
+        }
+  Wartezeit vs. Wetter:
+    dataset: gym
+    render-plot:
+      spec: |
+        {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "mark": {
+            "type": "circle",
+            "size": 100,
+            "tooltip": {"content": "data"}
+          },
+          encoding: {
+            x: {
+              field: "Grad",
+              type: "quantitative"
+            },
+            y: {
+              field: "Wartezeit (min)",
+              type: "quantitative"
+            },
+            color: {
+              field: "Wetter",
+              type: "nominal",
+              scale: {
+                  "domain": ["Sonne", "Regen", "bewölkt"],
+                  "range": ["orange", "blue", "green"]
+              }
+            }
+          }
+        }
+  Wartezeit vs. Datum:
+    dataset: gym
+    render-plot:
+      spec: |
+        {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "mark": {
+            "type": "circle",
+            "size": 100,
+            "tooltip": {"content": "data"}
+          },
+          encoding: {
+            x: {
+              timeUnit: "yearmonthdatehoursminutes",
+              field: "Datum",
+              type: "temporal",
+            },
+            y: {
+              field: "Wartezeit (min)",
+              type: "quantitative"
+            },
+            color: {
+              field: "Gym",
+              type: "nominal",
+              scale: {
+                scheme: "accent"
+              }
+            }
+          }
+        }
