@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>datavzrd report</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<script src="../static/bundle.js"></script>
+<div class="collapse" id="sidebar">
+    <div class="card" id="sidebar-card">
+        <ul class="list-group list-group-flush" id="sidebar-list">
+            
+            
+        </ul>
+    </div>
+</div>
+
+<div id="page-container">
+    <div id="content-wrap">
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand navbar-light navbar-top">
+                <div class="collapse navbar-collapse" id="navbarText2">
+                    <ol class="navbar-nav mr-auto breadcrumb">
+                        <li class="breadcrumb-item"><div>Gym Data</div></li>
+                        <li class="breadcrumb-item">
+                            <select id="view-selection" title="Wartezeit vs. Wetter" data-width="fit" onchange="location = this.value;" data-live-search-placeholder="Filter..." class="selectpicker" data-style="select-view" data-live-search="true">
+                                
+                                <option value="../Gym Tabelle/index_1.html" data-content="Gym Tabelle <span class='badge badge-light'>10 rows rows</span>">Gym Tabelle</option>
+                                
+                                
+                                <option value="../Wartezeit vs. Datum/index_1.html" data-content="Wartezeit vs. Datum ">Wartezeit vs. Datum</option>
+                                
+                                <option value="../Wartezeit vs. Uhrzeit/index_1.html" data-content="Wartezeit vs. Uhrzeit ">Wartezeit vs. Uhrzeit</option>
+                                
+                                <option value="../Wartezeit vs. Wetter/index_1.html" data-content="Wartezeit vs. Wetter ">Wartezeit vs. Wetter</option>
+                                
+                            </select>
+                        </li>
+                    </ol>
+                </div>
+                <span class="pull-right">
+                    <button class="navbar-toggler" style="display: block !important;" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </span>
+            </nav>
+        </div>
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center" id="vis-container">
+                    <div class="mt-auto mb-auto ml-auto mr-auto" id="vis"></div>
+                    <script>
+                        const specs = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "mark": {
+    "type": "circle",
+    "size": 100,
+    "tooltip": {"content": "data"}
+  },
+  encoding: {
+    x: {
+      field: "Grad",
+      type: "quantitative"
+    },
+    y: {
+      field: "Wartezeit (min)",
+      type: "quantitative"
+    },
+    color: {
+      field: "Wetter",
+      type: "nominal",
+      scale: {
+          "domain": ["Sonne", "Regen", "bewölkt"],
+          "range": ["orange", "blue", "green"]
+      }
+    }
+  }
+}
+;
+                        
+                        const data = "᭠ᠭᠨ䀪ՐᎡ丧堮楒ₑŜא椠畸Ú䡠ł=〥瀲怹凤̸Ôᑠ䎘ᘊ払ᓀŧ䣵EႶ㱾FẄᘂࠡକဪ灉䀪⯳幌≁ᆤõ෻婐߀Ʊ澋械䀼奜㋬j堠㧌ᴳ'瀡〢天愠䙸塜‹䄰ʁφ∡㑀.ຜ″䥯࿨Ɛ䁠啀䉠༦瀯࿙%桢⋠ご瑸ᣙḠރЇᏲᅉ㬄粆(欠ސǜö剘暖⽐庹歊౷⊋唸碱搢⢂籶渠瘕吃惽ᆡ夜⊄境呱৘撵渶䷲姕揕搪Ს晴嗂ᓍ➐㱦㒷朗瓠➸ห絶䘽氨䗞涶⴯洮እ⼴疱燒⾐䇚Ʈቕ㲚凎ᚴ䏩㶮⊷䓪璥╗叞䰠ೆ䋁ろ圌♠㙛Ⴛ䕓䀮ⵂ斠絑䒁橡畠ࡿ㆕䷲ẘ┫斪⊨ٶᖊ窄ǁ樀⹂毢焰僅Ѭ◦ߏⶬ೚⹧榦Ⰼ杋伅筐0䦆媍ᑩḩ†㼫㰱㒃ˁ⊲䚶僒岂⥨⛷❨仛挑ᥗㄠ涩テ䤷丯ٌͥ㆝㝣啨窵䉺ㅩ竜掙屚㉵ㇼ瓠Â'咪㈁☰唩∑灴ݪ䄤燺挎䨦崞矝沧့෨䁙አԁ━䮉㧓Ń愋∠Γ昤Ⱚ墯◇敾ṭ࣪㱪ᓮ㓩Ŝẍ當܃甂ㅡ䁋Ϯ磙㏥䐧㠡綋㨸敐⫬ი⢠塶ۥ夞J⅘Πゔŀ涒㠲¦㱁⥂቏ᷫ⨆`୤  ";
+                        datavzrd.load_plot(specs, data, false);
+                        
+                        
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Error when calling custom function for column <b id="error-column"></b> (please fix the function definition in the datavzrd config):</p>
+                    <pre id="error-modal-text"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <nav class="navbar navbar-expand navbar-light navbar-top">
+            <a class="navbar-brand" href="#">datavzrd</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/datavzrd/datavzrd/blob/master/CHANGELOG.md">2.42.1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/datavzrd/datavzrd">github</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                        created Tue Oct  8 12:10:47 2024
+                    </span>
+            </div>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>
