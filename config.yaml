@@ -32,17 +32,22 @@ views:
         {
           "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
           "mark": {
-            "type": "line"
+            "type": "bar"
           },
           encoding: {
             x: {
-              timeUnit: "hoursminutes",
+              timeUnit: {"unit": "hoursminutes", "step": 15},
               field: "Datum",
               type: "temporal",
+              "axis": {
+              "format": "%H:%M", 
+              "title": "Time (15-min intervals)"
+              }
             },
             y: {
               field: "Wartezeit (min)",
-              type: "quantitative"
+              type: "quantitative",
+              aggregate: "mean"
             },
             color: {
               field: "Gym",
