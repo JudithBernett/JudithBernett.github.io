@@ -17,3 +17,4 @@ data.drop(columns=["Ankunftszeit"], inplace=True)
 data.sort_values(by="Datum", inplace=True)
 # save as csv
 data.to_csv("gym.csv", index=False)
+# datavzrd config.yaml --output gym_output --overwrite-output
