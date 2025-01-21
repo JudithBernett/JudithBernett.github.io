@@ -1,0 +1,31 @@
+Wartezeit (min),Datum,Gym,Person,Wetter spezifisch,Wetter,Grad,Jahreszeit
+45,2024-08-19 18:00:00,Nord,Vicci/Lucas,Regen,Regen,15,🌞
+30,2024-08-26 17:50:00,Nord,Vicci/Lucas,bewölkt,bewölkt,17,🌞
+0,2024-08-26 18:53:00,Nord,Judith,bewölkt,bewölkt,17,🌞
+12,2024-08-26 19:16:00,Nord,Juli,bewölkt,bewölkt,17,🌞
+0,2024-08-31 12:30:00,Nord,Vicci,Sonne,Sonne,27,🌞
+0,2024-09-10 19:00:00,Nord,Vicci/Lucas,Durchwachsen ,bewölkt,15,🍂
+6,2024-09-15 12:12:00,Nord,Vicci/Lucas ,Bewölkt mir überwiegend Sonne ,bewölkt,11,🍂
+1,2024-09-16 20:07:00,Nord,Vicci/Lucas ,Extremregen Warnung ,Regen,10,🍂
+0,2024-10-05 11:30:00,Werksviertel ,Lucas/Särah ,Nieselregen ,Regen,9,🍂
+0,2024-10-07 18:43:00,Nord,Judith/Juli,leicht bewölkt,bewölkt,19,🍂
+9,2024-10-14 19:03:00,Nord,Lucas/Vicci,Teilweise Nieselregen,bewölkt,15,🍂
+3,2024-10-14 19:36:00,Nord,Judith,Teilweise Nieselregen,bewölkt,13,🍂
+2,2024-10-21 18:13:00,Nord,Vicci/Lucas ,Blauer Himmel mit Kondensstreifen ,Sonne ,15,🍂
+1,2024-10-21 18:28:00,Nord,Judith,Sonnenuntergang,Sonne,15,🍂
+10,2024-10-21 19:16:00,Nord,Alicia,Klar ,Klar,13,🍂
+1,2024-10-24 17:29:00,Nord,Judith/Juli,bewölkt,bewölkt,12,🍂
+16,2024-11-20 19:35:00,Nord,Judith/Juli,"kalt, es liegt Schnee",Klar,2,🍂
+0,2024-11-23 12:56:00,Nord,Lucas,Blau grauer Himmel es liegt Schnee aber nicht auf den Straßen ,Teils Bewölkt ,3,🍂
+0,2024-11-26 14:02:00,Nord,Lucas ,Es sind dunkle und helle Wolken am Himmel mit ein bisschen Blau ,Teils Bewölkt ,5,🍂
+0,2024-11-28 15:45:00,Theresienwiese ,Lucas ,Teils bewölkt ,Teils Bewölkt ,5,🍂
+0,2024-11-28 18:16:00,Nord ,Lucas ,Teils bewölkt ,Teils Bewölkt ,3,🍂
+0,2024-12-03 12:30:00,Nord ,Lucas ,Meist bewölkt ,Meist bewölkt ,6,🌨
+0,2024-12-05 20:06:00,Nord,Lucas,,Bewölkt ,1,🌨
+0,2024-12-08 11:30:00,Nord,Lucas ,,Bewölkt ,4,🌨
+0,2024-12-13 14:00:00,Theresienwiese,Lucas,,Bewölkt ,1,🌨
+15,2024-12-16 19:05:00,Nord ,Vicci Lucas ,,Meist Wolkenlos ,7,🌨
+0,2024-12-19 20:05:00,Nord,Judith/Juli,,Regen,8,🌨
+19,2025-01-13 18:17:00,Nord,Judith,,Wolkenlos,-3,🌨
+24,2025-01-16 18:00:00,Hirschgarten,Judith,,Bewölkt,1,🌨
+0,2025-01-19 12:29:00,Nord,Judith/Juli,,Sonnig,1,🌨
